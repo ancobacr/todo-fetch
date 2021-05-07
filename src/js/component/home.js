@@ -50,6 +50,7 @@ export function ToDoList() {
 			setTask(newArray);
 			setUserInput(" ");
 			setCount(count + 1);
+			changesInList();
 		}
 	};
 
@@ -57,6 +58,7 @@ export function ToDoList() {
 		task.splice(id, 1);
 		setTask([...task]);
 		setCount(count - 1);
+		changesInList();
 	};
 
 	return (
@@ -90,7 +92,7 @@ export function ToDoList() {
 					))}
 
 					<Card.Footer>
-						<p className="text-muted">{count} task's left</p>
+						<p className="text-muted">{count} tasks left</p>
 					</Card.Footer>
 				</Card>
 			</Container>
